@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Download, Mail, Linkedin, Briefcase, Award, CheckCircle2, FileText, Moon, Sun, ChevronRight } from 'lucide-react';
+import { Download, Mail, Linkedin, Briefcase, Award, CheckCircle2, FileText, Moon, Sun, ChevronRight, GraduationCap } from 'lucide-react';
 import { QRCodeCanvas } from 'qrcode.react';
 
 const App = () => {
@@ -15,8 +15,9 @@ const App = () => {
     }
   }, [isDark]);
 
+  // --- branding strategist update: set to your actual live link ---
   const linkedInUrl = "https://www.linkedin.com/in/sahil-kshirsagar-749a25218";
-  const portfolioUrl = "https://sahil-kshirsagar-portfolio.vercel.app"; // Update after Vercel deployment
+  const portfolioUrl = "https://sahil-portfolio-swart.vercel.app/"; // --- Patched from development ---
 
   // QR Code Downloader
   const downloadQR = (id, filename) => {
@@ -128,7 +129,7 @@ const App = () => {
       </section>
 
       {/* --- CAREER TIMELINE --- */}
-      <section className="py-24 px-6">
+      <section id="experience" className="py-24 px-6">
         <div className="max-w-4xl mx-auto">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="flex items-center gap-4 mb-16">
             <div className={`p-3 rounded-xl ${isDark ? 'bg-brandYellow/10 text-brandYellow' : 'bg-brandAccent/10 text-brandAccent'}`}>
@@ -139,18 +140,18 @@ const App = () => {
 
           <div className={`space-y-12 border-l-2 ml-4 md:ml-6 pl-8 md:pl-12 relative ${isDark ? 'border-gray-800' : 'border-gray-200'}`}>
             
-            {/* Role 1 */}
+            {/* IQVIA Role - Clinical Specialist focused */}
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="relative group">
               <div className={`absolute -left-[41px] md:-left-[57px] top-1.5 w-5 h-5 rounded-full border-4 ${isDark ? 'bg-brandYellow border-darkBg shadow-[0_0_15px_rgba(253,224,71,0.4)]' : 'bg-brandAccent border-lightBg shadow-[0_0_15px_rgba(37,99,235,0.4)]'}`} />
               <p className={`text-sm font-bold uppercase tracking-widest mb-2 ${isDark ? 'text-brandYellow' : 'text-brandAccent'}`}>Mar 2023 - Feb 2026</p>
               <h3 className="text-2xl font-bold mb-1">Associate Clinical Data Coordinator</h3>
               <p className={`font-medium mb-4 ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>IQVIA | Global Oncology Trials</p>
               <p className={`leading-relaxed ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
-                Managed end-to-end clinical data discrepancy resolution across 500+ patient records. Conducted rigorous QC checks, authored data clarifications, and maintained strict compliance with ICH-GCP and MHRA regulatory frameworks.
+                Managed end-to-end clinical data discrepancy resolution across 500+ patient records. Conducted rigorous QC checks, authored data clarifications, and maintained strict compliance with ICH-GCP and MHRA regulatory frameworks. Reduced query turnaround time by 20%.
               </p>
             </motion.div>
 
-            {/* Role 2 */}
+            {/* Other Roles - focused on transferable operational excellence */}
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="relative group">
               <div className={`absolute -left-[41px] md:-left-[57px] top-1.5 w-5 h-5 rounded-full border-4 transition-colors ${isDark ? 'bg-gray-700 border-darkBg group-hover:bg-gray-500' : 'bg-gray-300 border-lightBg group-hover:bg-gray-400'}`} />
               <p className="text-sm font-bold uppercase tracking-widest mb-2 text-gray-500">Jan 2023 - Mar 2023</p>
@@ -161,14 +162,13 @@ const App = () => {
               </p>
             </motion.div>
 
-            {/* Role 3 */}
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="relative group">
               <div className={`absolute -left-[41px] md:-left-[57px] top-1.5 w-5 h-5 rounded-full border-4 transition-colors ${isDark ? 'bg-gray-700 border-darkBg group-hover:bg-gray-500' : 'bg-gray-300 border-lightBg group-hover:bg-gray-400'}`} />
               <p className="text-sm font-bold uppercase tracking-widest mb-2 text-gray-500">Mar 2022 - Feb 2023</p>
               <h3 className="text-xl font-bold mb-1">Customer Service Team Member</h3>
               <p className={`font-medium mb-4 ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>Retail Store Operations</p>
               <p className={`leading-relaxed ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
-                Delivered patient, focused customer service in a fast-paced environment. Managed inventory accurately and collaborated with colleagues to exceed operational targets.
+                Delivered patient-focused customer service in a fast-paced setting. Managed inventory accurately and collaborated to exceed operational targets.
               </p>
             </motion.div>
 
@@ -176,8 +176,30 @@ const App = () => {
         </div>
       </section>
 
+      {/* --- ADDED: EDUCATION SECTION --- */}
+      <section id="education" className={`py-24 px-6 border-t ${isDark ? 'bg-cardDark/30 border-gray-800' : 'bg-white border-gray-100'}`}>
+        <div className="max-w-4xl mx-auto">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="flex items-center gap-4 mb-16">
+            <div className={`p-3 rounded-xl ${isDark ? 'bg-brandYellow/10 text-brandYellow' : 'bg-brandAccent/10 text-brandAccent'}`}>
+              <GraduationCap size={28} />
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold">Academic Foundation</h2>
+          </motion.div>
+
+          {/* Clinical focused education item */}
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className={`p-8 rounded-3xl border transition-colors ${isDark ? 'bg-cardDark border-gray-800 hover:border-brandYellow/40' : 'bg-white border-gray-100 shadow-sm hover:border-brandAccent/40 hover:shadow-lg'}`}>
+            <p className={`text-sm font-bold uppercase tracking-widest mb-2 ${isDark ? 'text-brandYellow' : 'text-brandAccent'}`}>2020 - 2023</p>
+            <h3 className="text-2xl font-bold mt-2 text-white">Bachelor of Science, (BSc)</h3>
+            <p className={`font-medium mt-1 mb-4 ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>Savitribai Phule Pune University | India</p>
+            <p className={`mt-4 leading-relaxed ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
+              Specialised in Microbiology. Coursework included advanced Laboratory Techniques, Molecular Biology, and Biostatistics, providing the foundational scientific knowledge essential for interpreting complex clinical trial protocols and data.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
       {/* --- QR / SHARE SECTION --- */}
-      <section className={`py-24 px-6 border-t ${isDark ? 'bg-cardDark/40 border-gray-800/50' : 'bg-white/50 border-gray-200'}`}>
+      <section id="connect" className={`py-24 px-6 border-t ${isDark ? 'bg-darkBg border-gray-800/50' : 'bg-lightBg border-gray-200'}`}>
         <div className="max-w-5xl mx-auto text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Let's Connect</h2>
           <p className={isDark ? 'text-gray-400' : 'text-gray-600'}>Scan to save my professional profile or view this site on a mobile device.</p>
@@ -190,39 +212,4 @@ const App = () => {
             <Linkedin className="w-10 h-10 text-[#0A66C2] mb-6" />
             <h3 className="text-xl font-bold mb-6">LinkedIn Profile</h3>
             <div className="bg-white p-4 rounded-2xl mb-8 shadow-sm">
-              <QRCodeCanvas id="linkedin-qr" value={linkedInUrl} size={160} level={"H"} />
-            </div>
-            <div className="flex gap-3 w-full">
-              <a href={linkedInUrl} target="_blank" rel="noreferrer" className="flex-1 py-3 rounded-xl bg-[#0A66C2]/10 text-[#0A66C2] font-semibold text-center hover:bg-[#0A66C2]/20 transition-colors flex items-center justify-center gap-2">
-                Visit <ChevronRight size={16} />
-              </a>
-              <button onClick={() => downloadQR('linkedin-qr', 'Sahil_LinkedIn_QR.png')} className={`flex-1 py-3 rounded-xl font-semibold transition-colors flex items-center justify-center gap-2 ${isDark ? 'bg-gray-800 text-white hover:bg-gray-700' : 'bg-gray-100 text-gray-900 hover:bg-gray-200'}`}>
-                <Download size={16}/> Save
-              </button>
-            </div>
-          </motion.div>
-
-          {/* Portfolio Card */}
-          <motion.div whileHover={{ y: -8 }} className={`p-10 rounded-3xl border flex flex-col items-center flex-1 transition-shadow duration-300 ${isDark ? 'bg-cardDark border-gray-800 hover:shadow-2xl hover:shadow-brandYellow/10' : 'bg-white border-gray-200 shadow-sm hover:shadow-xl hover:shadow-brandAccent/10'}`}>
-            <Award className={`w-10 h-10 mb-6 ${isDark ? 'text-brandYellow' : 'text-brandAccent'}`} />
-            <h3 className="text-xl font-bold mb-6">Share Portfolio</h3>
-            <div className="bg-white p-4 rounded-2xl mb-8 shadow-sm">
-              <QRCodeCanvas id="portfolio-qr" value={portfolioUrl} size={160} level={"H"} />
-            </div>
-            <button onClick={() => downloadQR('portfolio-qr', 'Sahil_Portfolio_QR.png')} className={`w-full py-3 rounded-xl font-semibold transition-colors flex items-center justify-center gap-2 ${isDark ? 'bg-gray-800 text-white hover:bg-gray-700' : 'bg-gray-100 text-gray-900 hover:bg-gray-200'}`}>
-                <Download size={16}/> Download Portfolio QR
-            </button>
-          </motion.div>
-
-        </div>
-      </section>
-
-      {/* --- FOOTER --- */}
-      <footer className={`text-center py-10 text-sm border-t ${isDark ? 'text-gray-600 border-gray-900' : 'text-gray-400 border-gray-200'}`}>
-        <p>Based in Harrow, London. Open to opportunities across the UK.</p>
-      </footer>
-    </div>
-  );
-};
-
-export default App;
+              <QRCodeCanvas id="linkedin-
