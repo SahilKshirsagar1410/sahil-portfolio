@@ -70,7 +70,7 @@ const App = () => {
 
           <div className="flex flex-wrap justify-center gap-4">
             <a href="mailto:kshirsagarsahil007@gmail.com" className="flex items-center gap-2 px-8 py-4 rounded-xl bg-brandYellow text-black font-bold hover:shadow-[0_0_20px_rgba(253,224,71,0.4)] hover:-translate-y-1 transition-all"><Mail size={20} /> Contact Me</a>
-            <a href="/Sahil_CV.pdf" download className="flex items-center gap-2 px-8 py-4 rounded-xl bg-[#111] border border-gray-800 font-bold hover:border-gray-600 hover:-translate-y-1 transition-all text-white"><FileText size={20} /> Download CV</a>
+            <a href="mailto:kshirsagarsahil007@gmail.com?subject=Requesting%20Professional%20CV%20-%20Sahil%20Kshirsagar&body=Hi%20Sahil,%0A%0AI%20was%20viewing%20your%20portfolio%20and%20would%20like%20to%20request%20a%20copy%20of%20your%20full%20CV.%0A%0AThank%20you!" className="flex items-center gap-2 px-8 py-4 rounded-xl bg-[#111] border border-gray-800 font-bold hover:border-gray-600 hover:-translate-y-1 transition-all text-white"><FileText size={20} /> Request CV</a>
           </div>
         </motion.div>
       </section>
