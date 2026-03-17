@@ -173,12 +173,13 @@ const App = () => {
               <div className="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center shrink-0"><FileText className="text-gray-400" size={24}/></div>
             </motion.div>
 
+            {/* --- CORRECTED BACHELOR'S DEGREE --- */}
             <motion.div variants={fadeInUp} whileHover={{ scale: 1.02 }} className="p-8 rounded-3xl border border-gray-800 bg-[#111] hover:border-brandYellow/30 transition-all shadow-lg flex flex-col md:flex-row md:items-center justify-between gap-4">
               <div>
                 <p className="text-gray-500 text-sm font-bold uppercase tracking-widest mb-1">Bachelor's Degree</p>
-                <h3 className="text-xl md:text-2xl font-bold text-white">BBA in Computer Applications</h3>
+                <h3 className="text-xl md:text-2xl font-bold text-white">Bachelor of Science (BSc) in Microbiology</h3>
               </div>
-              <div className="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center shrink-0"><Code className="text-gray-400" size={24}/></div>
+              <div className="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center shrink-0"><Activity className="text-gray-400" size={24}/></div>
             </motion.div>
 
           </motion.div>
